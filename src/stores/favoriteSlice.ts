@@ -24,7 +24,7 @@ export const createFavoriteSlice : StateCreator<FavoriteSliceType & RecipeSliceT
             set((state) => ({
                 favorites: [...state.favorites, recipe]
             }))
-            createNotificacionSlice(set, get, api).showNotification({text: 'Added to Favorite', error: true})
+            createNotificacionSlice(set, get, api).showNotification({text: 'Added to Favorite', error: false})
 
         }
         createRecipeSlice(set, get, api).closeModal()
