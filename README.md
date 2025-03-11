@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# Recipes 🍳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Recipes**! This project is a web application that allows you to search for drink and cocktail recipes using ingredients and categories. It's the perfect tool for mixology enthusiasts and anyone looking for new drink ideas.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Recipe Search:** Search for recipes by ingredient or category.
+- **Favorites:** Save your favorite recipes for easy access.
+- **User-Friendly Interface:** Modern and responsive design for an optimal user experience.
+- **Modern Technologies:** Built with React, Tailwind CSS, and Zustand for state management.
 
-## Expanding the ESLint configuration
+## Screenshots 🖼️
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[![Home-Recipe.png](https://i.postimg.cc/ncKrvjTT/Home-Recipe.png)](https://postimg.cc/HVxTmLq7)
+*Home page with the search form.*
 
-- Configure the top-level `parserOptions` property like this:
+[![Recipe.png](https://i.postimg.cc/y8bH97qv/Recipe.png)](https://postimg.cc/LJLwFK81)
+*Home page with Recipes.*
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+[![Favorite-recipe.png](https://i.postimg.cc/9fZGTFRh/Favorite-recipe.png)](https://postimg.cc/7CPGr4ns)
+*Favorites page with saved recipes.*
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used 🛠️
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend:**
+  - [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+  - [Tailwind CSS](https://tailwindcss.com/) - CSS interface design framework.
+  - [React Router](https://reactrouter.com/) - Routing in the application.
+  - [Zustand](https://zustand-demo.pmnd.rs/) - Global state management.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **API:**
+  - [TheCocktailDB](https://www.thecocktaildb.com/api.php) - API for fetching drink and cocktail data.
+
+## Installation 🚀
+
+Follow these steps to install and run the project on your local machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Skolldar/Recipes.git
+   cd Recipes
+   
+2. **Install dependencies:**
+   ```bash
+    npm install
+   
+3. **Start the development server:**
+    ```bash
+    npm run dev
+4. **Open the project in your browser:**
+   Visit http://localhost:5173 to see the app in action.
+
+     
