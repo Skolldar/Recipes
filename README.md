@@ -48,6 +48,30 @@ Follow these steps to install and run the project on your local machine:
     ```bash
     npm run dev
 4. **Open the project in your browser:**
-   Visit http://localhost:5173 to see the app in action.
+     Visit http://localhost:5173 to see the app in action.
 
+   # Project Structure 📂
+- **`public/`**: Contains static assets like images, logos, and other files that don’t need processing.
+- **`src/`**: The main source code of the application.
+  - **`components/`**: Reusable React components.
+  - **`stores/`**: Zustand state management logic.
+  - **`App.jsx`**: The main component that renders the application.
+  - **`main.jsx`**: The entry point of the application where React is mounted.
+- **`.gitignore`**: Specifies files and folders to be ignored by Git.
+- **`package.json`**: Lists project dependencies and scripts.
+- **`README.md`**: Documentation for the project (you're reading it!).
+- **`vite.config.js`**: Configuration file for Vite, the build tool used in the project.
+
+# How to Contribute 🤝
+Contributions are welcome! If you'd like to improve this project, follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch (git checkout -b feature/new-feature).
+
+3. Make and commit your changes (git commit -m 'Add new feature').
+
+4. Push to the branch (git push origin feature/new-feature).
+
+5. Open a Pull Request and describe your changes.
      
