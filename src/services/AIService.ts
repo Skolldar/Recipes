@@ -1,0 +1,13 @@
+import  {streamText} from "ai";
+import { openRouter } from "../lib/ai";
+
+
+export default {
+    async generateRecipe(prompt: string) {
+        const result = streamText({
+            model: openRouter('tngtech/deepseek-r1t2-chimera:free'),
+            prompt: `Generate a detailed recipe based on the following input: ${prompt}`,
+        });
+        return result.textStream;
+    }
+};

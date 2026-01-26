@@ -5,6 +5,7 @@ import Layout from './layout/Layout'
 //importamos con lazy para que cargue el archivo cuando el usuario de click en la ruta.
 const HomePage = lazy(() => import ('./view/HomePage'))
 const FavoritePage = lazy(() => import ('./view/FavoritePage'))
+const GenerateAI = lazy(() => import ('./view/GenerateAI'))
 
 
 function AppRouter() {
@@ -21,6 +22,12 @@ function AppRouter() {
       <Route path="/favorites" element={
         <Suspense fallback="loading...">
           <FavoritePage/>
+        </Suspense>
+        }/>
+
+        <Route path="/generate" element={
+        <Suspense fallback="loading...">
+          <GenerateAI/>
         </Suspense>
         }/>
 
