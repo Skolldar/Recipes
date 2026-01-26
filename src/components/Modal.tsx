@@ -11,21 +11,25 @@ export default function Modal() {
     const favoriteExists = useAppStore((state) => state.favoriteExists)
 
     const renderIngredients = () => {
-        const ingredients : JSX.Element[] = [] // se le coloca JSX.Element poruqe es el tipo de la funcion de renderIngredients y sera un arreglo
+        const ingredients : JSX.Element[] = [];
         for(let i = 1; i <= 6; i++) {
-            const ingredient = selectedRecipe[`strIngredient${i}` as keyof Recipe] // as keyof le dice que el tipo sera igual al type de recipe.
-            const measure = selectedRecipe[`strMeasure${i}` as keyof Recipe]
-
-            if(ingredient && measure) {
-                ingredients.push( //push usualmente no es un metodo quqe se utilice en react porque muta el arreglo original, pero estee no es un state, es un arreglo.
-                    <li key={i} className='text-lg font-normal'>
-                        {ingredient} - {measure}
-                    </li>
-                )
-            }
+          const ingredient = selectedRecipe[`strIngredient${i}` as keyof Recipe];
+          const measure = selectedRecipe[`strMeasure${i}` as keyof Recipe];
+          if(ingredient && measure) {
+            ingredients.push(
+              <li key={i} className="text-lg font-normal flex items-center gap-2">
+                <span className="inline-block w-4 text-center">•</span>
+                <span>{ingredient} - {measure}</span>
+              </li>
+            );
+          }
         }
-       return ingredients
-    }
+        return (
+          <ul className="pl-2 mb-4">
+            {ingredients}
+          </ul>
+        );
+      }
 
 
   return (
@@ -66,7 +70,7 @@ export default function Modal() {
                   <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
                     Ingredientes y Cantidades
                   </Dialog.Title>
-                        {renderIngredients()}
+                  {renderIngredients()}
                   <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
                     Instrucciones
                   </Dialog.Title>
