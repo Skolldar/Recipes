@@ -1,6 +1,6 @@
-# Recipes 🍳
+# Friendly Cocktails 🍸
 
-Welcome to **Recipes**! This project is a web application that allows you to search for drink and cocktail recipes using ingredients and categories. It's the perfect tool for mixology enthusiasts and anyone looking for new drink ideas.
+Welcome to **Friendly Cocktails**! This project is a web application that allows you to search for drink and cocktail recipes using ingredients and categories. It's the perfect tool for mixology enthusiasts and anyone looking for new drink ideas.
 
 ## Features ✨
 
@@ -17,8 +17,11 @@ Welcome to **Recipes**! This project is a web application that allows you to sea
 [![Recipe.png](https://i.postimg.cc/y8bH97qv/Recipe.png)](https://postimg.cc/LJLwFK81)
 *Home page with Recipes.*
 
-[![Favorite-recipe.png](https://i.postimg.cc/9fZGTFRh/Favorite-recipe.png)](https://postimg.cc/7CPGr4ns)
+[![Screenshot-from-2026-01-26-12-10-53.png](https://i.postimg.cc/9Ffps7qr/Screenshot-from-2026-01-26-12-10-53.png)](https://postimg.cc/QVR1TVm3)
 *Favorites page with saved recipes.*
+
+[![Screenshot-from-2026-01-26-12-12-46.png](https://i.postimg.cc/yxCNcc4P/Screenshot-from-2026-01-26-12-12-46.png)](https://postimg.cc/zbp51Lfb)
+*Generate with AI.*
 
 ## Technologies Used 🛠️
 
