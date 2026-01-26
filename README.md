@@ -33,6 +33,7 @@ Welcome to **Friendly Cocktails**! This project is a web application that allows
 
 - **API:**
   - [TheCocktailDB](https://www.thecocktaildb.com/api.php) - API for fetching drink and cocktail data.
+  - [OpenRouter(https://openrouter.ai/)] - API for accessing AI/LLM services.
 
 ## Installation 🚀
 
