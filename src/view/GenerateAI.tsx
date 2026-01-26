@@ -1,4 +1,5 @@
 import { useAppStore } from "../stores/useAppStore";
+import ReactMarkdown from "react-markdown";
 
 
 export default function GenerateAI() {
@@ -59,7 +60,7 @@ export default function GenerateAI() {
           </div>
         )}
         <div className="py-10 whitespace-pre-wrap">
-          {recipe || "Recipe will be shown here..."}
+          {recipe ? <ReactMarkdown>{recipe}</ReactMarkdown> : isGenerating ? null : <p>No recipe generated yet.</p> }
         </div>
       </div>
 
