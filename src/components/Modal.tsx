@@ -49,7 +49,7 @@ export default function Modal() {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center justify-center lg:p-4 p-2 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -59,28 +59,28 @@ export default function Modal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6" >
+                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white p-4 text-left shadow-xl transition-all sm:my-4 sm:max-w-xl sm:p-6" >
 
-                  <Dialog.Title as="h3" className="text-gray-900 text-4xl font-extrabold my-5 text-center">
+                  <Dialog.Title as="h3" className="text-gray-900 lg:text-4xl text-2xl font-extrabold lg:my-5 my-2 text-center">
                       {selectedRecipe.strDrink}
                   </Dialog.Title>
 
-                  <img src={selectedRecipe.strDrinkThumb} alt={`image of ${selectedRecipe.strDrink}`}/>
+                  <img src={selectedRecipe.strDrinkThumb} className="mx-auto" alt={`image of ${selectedRecipe.strDrink}`}/>
 
-                  <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
+                  <Dialog.Title as="h3" className="text-gray-900 lg:text-2xl text-xl font-extrabold my-5">
                     Ingredientes y Cantidades
                   </Dialog.Title>
                   {renderIngredients()}
-                  <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
+                  <Dialog.Title as="h3" className="text-gray-900 lg:text-2xl text-xl font-extrabold my-5">
                     Instrucciones
                   </Dialog.Title>
-                    <p className='text-lg'>{selectedRecipe.strInstructions}</p>
-                    <div className='mt-5 flex justify-between gap-4'>
-                      <button className='w-full rounded bg-gray-600 p-3 font-bold uppercase text-white shadow hover:bg-gray-500' type='button' onClick={closeModal}>
+                    <p className='lg:text-lg text-md'>{selectedRecipe.strInstructions}</p>
+                    <div className='lg:mt-5 mt-3 flex justify-between lg:gap-4 gap-2'>
+                      <button className='w-full rounded lg:text-xl text-sm bg-gray-600 lg:p-3 p-2 font-bold uppercase text-white shadow hover:bg-gray-500' type='button' onClick={closeModal}>
                       Close
                       </button>
-                      <button className='w-full rounded bg-orange-600 p-3 font-bold uppercase text-white shadow hover:bg-orange-500' type='button' onClick={() => handleClickFavorite(selectedRecipe)}>
-                        {favoriteExists(selectedRecipe.idDrink) ? 'Delete' : 'add to favorite'}
+                      <button className='w-full rounded lg:text-xl text-sm bg-orange-600 lg:p-3 p-2 font-bold uppercase text-white shadow hover:bg-orange-500' type='button' onClick={() => handleClickFavorite(selectedRecipe)}>
+                        {favoriteExists(selectedRecipe.idDrink) ? 'Delete' : 'Add to Favorite'}
                       </button>
                     </div>
                 </Dialog.Panel>

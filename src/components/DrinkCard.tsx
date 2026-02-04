@@ -14,11 +14,11 @@ const DrinkCard = ({drink} : DrinkCardProps) => {
             <img src={drink.strDrinkThumb} alt={`image of ${drink.strDrink}`} className="hover:scale-125 transition-transform hover:rotate-2"/>
         </div>
 
-        <div className="p-5 ">
-            <h2 className="text-2xl font-black truncate">{drink.strDrink}</h2>
+        <div className="lg:p-5 p-2">
+            <h2 className="lg:text-2xl text-xl font-black truncate">{drink.strDrink}</h2>
             <button
                 type="button"
-                className="bg-orange-600 hover:bg-orange-500 mt-5 w-full p-3 font-bold text-white text-lg"
+                className="bg-orange-600 hover:bg-orange-500 mt-5 w-full p-3 font-bold text-white lg:text-lg text-md"
                 onClick={() => selectedRecipe(drink.idDrink)}>
                     Check Recipe
             </button>
