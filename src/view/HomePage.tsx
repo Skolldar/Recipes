@@ -8,10 +8,10 @@ function HomePage() {
   const hasDrinks = useMemo(()  => drinks.drinks.length, [drinks])
   return (
     <>
-      <div>
-        <h1 className="text-6xl font-extrabold">Recipe</h1>
+      <div className="">
+        <h1 className="lg:text-6xl text-3xl font-extrabold">Recipe</h1>
         {hasDrinks ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 lg:my-10 lg:gap-10 my-5 gap-5">
           {drinks.drinks.map((drink) => (
             <DrinkCard
               key={drink.idDrink}
@@ -20,7 +20,7 @@ function HomePage() {
           ))}
           </div>
         ): (
-          <p className="my-10 text-center text-2xl">There's no recipes yet.</p>
+          <p className="lg:my-10 my-5 text-center lg:text-2xl text-xl ">There's no recipes yet.</p>
         )}
         </div>
     </>

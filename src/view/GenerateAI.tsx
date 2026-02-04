@@ -25,12 +25,12 @@ export default function GenerateAI() {
   
   return (
     <>
-      <h1 className="max-w-4xl text-6xl font-extrabold">Generate AI Recipe</h1>
+      <h1 className="max-w-4xl lg:text-6xl text-3xl font-extrabold">Generate AI Recipe</h1>
 
-      <div className="">
+      <div className="mt-2">
         <form  
           onSubmit={handleSubmit}
-          className='flex flex-col space-y-3 py-10'
+          className='flex flex-col space-y-3 lg:py-10 py-5'
         >
           <div className="relative">
             <input 
@@ -42,7 +42,7 @@ export default function GenerateAI() {
             <button
               type="submit" 
               aria-label="Send prompt"
-              className={`cursor-pointer absolute top-1/2 right-5 transform -translate-x-1/2 -translate-y-1/2 ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`cursor-pointer absolute top-1/2 lg:right-5 right-[-10px] transform -translate-x-1/2 -translate-y-1/2 bg-white ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={isGenerating}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -59,8 +59,8 @@ export default function GenerateAI() {
             <span>Generating recipe...</span>
           </div>
         )}
-        <div className="py-10 whitespace-pre-wrap">
-          {recipe ? <ReactMarkdown>{recipe}</ReactMarkdown> : isGenerating ? null : <p>No recipe generated yet.</p> }
+        <div className="lg:py-10 py-5 whitespace-pre-wrap">
+          {recipe ? <ReactMarkdown>{recipe}</ReactMarkdown> : isGenerating ? null : <p className="lg:text-2xl text-xl text-center">No recipe generated yet.</p> }
         </div>
       </div>
 

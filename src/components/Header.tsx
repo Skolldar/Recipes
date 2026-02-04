@@ -44,25 +44,25 @@ export default function Header() {
   return (
     <>
     <header className={ isHome ? 'bg-header bg-cover bg-center' : 'bg-slate-800'}>
-        <div className="mx-auto container px-5 py-16">
+        <div className="mx-auto container px-5 lg:py-16 py-5">
             <div className="flex justify-between items-center">
                 <div>
-                    <a href='/'><img className="w-32" src="/logo.svg" alt="logotipo"/></a>
+                    <a href='/'><img className="lg:w-32 w-20" src="/logo.svg" alt="logotipo"/></a>
                    
                 </div>
 
-                <nav className='flex gap-4'>
+                <nav className='flex lg:gap-4 gap-2 text-md'>
                     <NavLink to="/" className={({isActive}) => isActive ? 'text-orange-500 font-bold uppercase' : 'text-white font-bold uppercase' }>Home</NavLink>
                     <NavLink to="/favorites" className={({isActive}) => isActive ? 'text-orange-500 font-bold uppercase' : 'text-white font-bold uppercase' }>Favorites</NavLink>
                     <NavLink to="/generate" className={({isActive}) => isActive ? 'text-orange-500 font-bold uppercase' : 'text-white font-bold uppercase' }>Generate Ai</NavLink>
                 </nav>
             </div>
             {isHome && (
-                <form onSubmit={handleSubmit} className='md:w1/2 2xl: w-1/3 bg-orange-600 my-32 p-10 rounded-lg shadow space-y-6'>
+                <form onSubmit={handleSubmit} className='md:w-1/2 2xl:w-1/3 bg-orange-600 my-32 p-10 rounded-lg shadow space-y-6'>
                     <div className='space-y-4'>
                         <label
                         htmlFor='ingredient'
-                        className='block text-white uppercase font-extrabold text-lg'
+                        className='block text-white uppercase font-extrabold lg:text-lg'
                         >Name or Ingredient</label>
 
                         <input
@@ -79,7 +79,7 @@ export default function Header() {
                     <div className='space-y-4'>
                         <label
                         htmlFor='category'
-                        className='block text-white uppercase font-extrabold text-lg'
+                        className='block text-white uppercase font-extrabold lg:text-lg'
                         >Category</label>
 
                         <select
