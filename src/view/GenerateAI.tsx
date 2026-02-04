@@ -42,10 +42,10 @@ export default function GenerateAI() {
             <button
               type="submit" 
               aria-label="Send prompt"
-              className={`cursor-pointer absolute top-1/2 lg:right-5 right-[-10px] transform -translate-x-1/2 -translate-y-1/2 bg-white lg:bg-transparent ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`cursor-pointer absolute top-1/2 lg:right-5 right-[-10px] transform -translate-x-1/2 -translate-y-1/2 ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={isGenerating}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth="1.5"
                 stroke="currentColor" className="w-10 h-10">
                 <path strokeLinecap="round" strokeLinejoin="round"
                   d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
